@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/yurylavrukhin/brain-games/issues"
   },
-  "homepage": "https://github.com/yurylavrukhin/brain-games#readme"
+  "homepage": "https://github.com/yurylavrukhin/brain-games#readme",
+  "type":"module",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  }
 }
