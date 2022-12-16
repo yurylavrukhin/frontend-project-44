@@ -16,8 +16,11 @@
     "url": "https://github.com/yurylavrukhin/brain-games/issues"
   },
   "homepage": "https://github.com/yurylavrukhin/brain-games#readme",
-  "type":"module",
+  "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
