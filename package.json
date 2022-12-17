@@ -18,7 +18,8 @@
   "homepage": "https://github.com/yurylavrukhin/brain-games#readme",
   "type": "module",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "dependencies": {
     "eslint": "^8.29.0",
