@@ -1,5 +1,5 @@
-import { getRandomNumber } from '../lib.js';
-import { playGame } from '../index.js';
+import getRandomNumber from '../lib.js';
+import playGame from '../index.js';
 
 const OPERATORS = ['+', '-', '*'];
 const MINIMUM_NUMBER = 1;
@@ -18,7 +18,7 @@ const getExpressionResult = (operator, firstOperand, secondOperand) => {
   }
 };
 
-export const play = () => playGame({
+export default () => playGame({
   description: 'What is the result of the expression?',
   playRound: () => {
     const operator = OPERATORS[Math.floor(Math.random() * OPERATORS.length)];

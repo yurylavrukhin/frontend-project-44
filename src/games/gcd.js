@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { getRandomNumber } from '../lib.js';
-import { playGame } from '../index.js';
+import getRandomNumber from '../lib.js';
+import playGame from '../index.js';
 
 const MINIMUM_NUMBER = 1;
 const MAXIMUM_NUMBER = 50;
@@ -13,7 +13,7 @@ const getGcd = (a, b) => {
   return Math.abs(a);
 };
 
-export const play = () => playGame({
+export default () => playGame({
   description: 'Find the greatest common divisor of given numbers.',
   playRound: () => {
     const number1 = getRandomNumber(MINIMUM_NUMBER, MAXIMUM_NUMBER);

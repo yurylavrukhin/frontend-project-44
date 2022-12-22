@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { getRandomNumber } from '../lib.js';
-import { playGame } from '../index.js';
+import getRandomNumber from '../lib.js';
+import playGame from '../index.js';
 
 const MINIMUM_NUMBER = 1;
 const MAXIMUM_NUMBER = 50;
@@ -19,9 +19,8 @@ const getIsPrime = (num) => {
   return true;
 };
 
-export const play = () => playGame({
-  description:
-      'Answer "yes" if given number is prime. Otherwise answer "no".',
+export default () => playGame({
+  description: 'Answer "yes" if given number is prime. Otherwise answer "no".',
   playRound: () => {
     const number = getRandomNumber(MINIMUM_NUMBER, MAXIMUM_NUMBER);
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { getRandomNumber } from '../lib.js';
-import { playGame } from '../index.js';
+import getRandomNumber from '../lib.js';
+import playGame from '../index.js';
 
 const PROGRESSION_LENGTH = 10;
 const MINIMUM_STARTING_NUMBER = 1;
@@ -22,7 +22,7 @@ const getProgression = (start, step) => {
   return iter([], 0);
 };
 
-export const play = () => playGame({
+export default () => playGame({
   description: 'What number is missing in the progression?',
   playRound: () => {
     const startNumber = getRandomNumber(

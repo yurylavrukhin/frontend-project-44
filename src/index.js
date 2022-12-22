@@ -1,9 +1,9 @@
 import readlineSync from 'readline-sync';
-import { askName } from './cli.js';
+import askName from './cli.js';
 
 const ROUNDS = 3;
 
-export const playGame = ({ description, playRound }) => {
+export default ({ description, playRound }) => {
   let isSuccess = true;
   const { name } = askName();
 

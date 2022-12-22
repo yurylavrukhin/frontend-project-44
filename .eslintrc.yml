@@ -14,4 +14,4 @@ rules:
   linebreak-style: 0
   import/prefer-default-export: off
   import/extensions: off
-  import/prefer-default-export: off
+  comma-dangle: 2
