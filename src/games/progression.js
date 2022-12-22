@@ -46,7 +46,7 @@ export const play = () =>
         )
       );
 
-      const question = progressionWithHiddenElement.join(" ");
+      const question = `Question: ${progressionWithHiddenElement.join(" ")}`;
 
       console.log(question);
 
