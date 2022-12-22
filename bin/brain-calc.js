@@ -1,16 +1,16 @@
 #!/usr/bin/env node
-import { getRandomNumber } from '../src/lib.js';
-import { playGame } from '../src/index.js';
+import { getRandomNumber } from "../src/lib.js";
+import { playGame } from "../src/index.js";
 
-const OPERATORS = ['+', '-', '*'];
+const OPERATORS = ["+", "-", "*"];
 
 const getExpressionResult = (operator, firstOperand, secondOperand) => {
   switch (operator) {
-    case '+':
+    case "+":
       return firstOperand + secondOperand;
-    case '-':
+    case "-":
       return firstOperand - secondOperand;
-    case '*':
+    case "*":
       return firstOperand * secondOperand;
     default:
       return null;
@@ -18,7 +18,7 @@ const getExpressionResult = (operator, firstOperand, secondOperand) => {
 };
 
 playGame({
-  description: 'What is the result of the expression?',
+  description: "What is the result of the expression?",
   playRound: () => {
     const operator = OPERATORS[Math.floor(Math.random() * OPERATORS.length)];
 

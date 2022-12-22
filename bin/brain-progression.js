@@ -26,11 +26,9 @@ playGame({
     const hiddenElementIndex = getRandomNumber(0, progression.length - 1);
 
     const progressionWithHiddenElement = progression.slice();
-    const solution = String(progressionWithHiddenElement.splice(
-      hiddenElementIndex,
-      1,
-      "..",
-    ));
+    const solution = String(
+      progressionWithHiddenElement.splice(hiddenElementIndex, 1, "..")
+    );
 
     const question = progressionWithHiddenElement.join(" ");
 

@@ -15,4 +15,4 @@ playGame({
       solution,
     };
   },
-})
+});
