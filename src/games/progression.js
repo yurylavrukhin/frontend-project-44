@@ -9,9 +9,9 @@ const MINIMUM_STEP_NUMBER = 1;
 const MAXIMUM_STEP_NUMBER = 50;
 const HIDDEN_ITEM_CHAR = '..';
 
-const getProgression = (start, step) => {
+const getProgression = (start, step, progressionLength) => {
   const iter = (progression, length) => {
-    if (length === PROGRESSION_LENGTH) {
+    if (length === progressionLength) {
       return progression;
     }
 
@@ -33,7 +33,7 @@ export default () => playGame({
       MINIMUM_STEP_NUMBER,
       MAXIMUM_STEP_NUMBER,
     );
-    const progression = getProgression(startNumber, progressionStep);
+    const progression = getProgression(startNumber, progressionStep, PROGRESSION_LENGTH);
     const hiddenElementIndex = getRandomNumber(0, progression.length - 1);
 
     const progressionWithHiddenElement = progression.slice();
@@ -45,11 +45,10 @@ export default () => playGame({
       ),
     );
 
-    const question = `Question: ${progressionWithHiddenElement.join(' ')}`;
-
-    console.log(question);
+    const question = `${progressionWithHiddenElement.join(' ')}`;
 
     return {
+      question,
       solution,
     };
   },

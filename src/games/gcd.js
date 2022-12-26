@@ -19,12 +19,12 @@ export default () => playGame({
     const number1 = getRandomNumber(MINIMUM_NUMBER, MAXIMUM_NUMBER);
     const number2 = getRandomNumber(MINIMUM_NUMBER, MAXIMUM_NUMBER);
 
-    const question = `Question: ${number1} ${number2}`;
+    const question = `${number1} ${number2}`;
 
-    console.log(question);
     const solution = String(getGcd(number1, number2));
 
     return {
+      question,
       solution,
     };
   },

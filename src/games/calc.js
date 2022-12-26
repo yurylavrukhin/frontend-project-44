@@ -25,13 +25,13 @@ export default () => playGame({
 
     const number1 = getRandomNumber(MINIMUM_NUMBER, MAXIMUM_NUMBER);
     const number2 = getRandomNumber(MINIMUM_NUMBER, MAXIMUM_NUMBER);
-    const question = `Question: ${number1} ${operator} ${number2}`;
 
-    console.log(question);
+    const question = `${number1} ${operator} ${number2}`;
 
     const solution = String(getExpressionResult(operator, number1, number2));
 
     return {
+      question,
       solution,
     };
   },

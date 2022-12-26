@@ -5,7 +5,7 @@ import playGame from '../index.js';
 const MINIMUM_NUMBER = 1;
 const MAXIMUM_NUMBER = 50;
 
-const getIsPrime = (num) => {
+const isPrime = (num) => {
   if (num < 2) {
     return false;
   }
@@ -24,12 +24,10 @@ export default () => playGame({
   playRound: () => {
     const number = getRandomNumber(MINIMUM_NUMBER, MAXIMUM_NUMBER);
 
-    const question = `Question: ${number}`;
-
-    console.log(question);
-    const solution = getIsPrime(number) ? 'yes' : 'no';
+    const solution = isPrime(number) ? 'yes' : 'no';
 
     return {
+      question: number,
       solution,
     };
   },
